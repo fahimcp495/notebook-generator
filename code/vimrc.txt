@@ -1,0 +1,26 @@
+imap jk <Esc>
+
+set nu
+set mouse=a
+set autoindent
+set tabstop=4
+set shiftwidth=4
+set smartindent
+set relativenumber
+set laststatus=2
+set clipboard=unnamed
+set hlsearch
+
+let mapleader = " "
+
+nnoremap <leader>s :w<Enter>
+
+syntax on
+
+vnoremap <leader>/ :s!^!//!<CR> :noh <CR> 
+vnoremap <leader>u :s!^//!!<CR>
+
+nnoremap <leader>/ :s!^!//!<CR> :noh <CR> 
+nnoremap <leader>u :s!^//!!<CR>
+
+nnoremap <F5> :! g++ -Wall -Wextra -std=c++17 % -o %:r && echo "-------Compiled.------" && ./%:r <CR>
